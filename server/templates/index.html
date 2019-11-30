@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>...</title>
+
+{% endblock %}
+
+{% block body %}
+<br>
+	{% for entry in data %}
+		<h2>• {{ entry }}</h2>
+		{% for obj in data[entry] %}
+			<p class="title"> {{ obj }} </p>
+			<p class="value"> {{ (data[entry][obj]) }} </p>
+			<ul>
+			</ul>
+		{% endfor %}
+	{% endfor %}
+
+
+{% endblock %}
